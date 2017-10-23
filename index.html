@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+</head>
+
+<body>
+
+	<button id="button">Click Me!</button>
+
+	<h1 class="my-title">Hello World</h1>
+
+	<p id="cost"></p>
+
+	<section class="space"></section>
+
+
+<script>
+
+	var price = 5;
+	var quantity = 14;
+	var total = price * quantity;
+
+	// Vanilla JS is different to jQuery with selectors
+	var el = document.getElementById("cost");	
+	// rather than "#button"
+	el.textContent = "$" + total;
+
+	
+
+</script>
+</body>
+
+</html>
