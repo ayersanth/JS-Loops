@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+</head>
+
+<body>
+
+	<button id="button">Click Me!</button>
+
+	<h1 id="answer">Hello World</h1>
+
+	<p id="cost"></p>
+
+	<h1 id="space"></h1>
+
+
+<script>
+
+// example of a for loop showen in console.log and written with document.write -----------------------------------------
+for (var i = 0; i < 10; i++){
+
+	document.write(i);
+	console.log(i);
+
+ } /*For loop end*/
+
+//  example of a for loop inside of a function -----------------------------------------
+function shout(){
+
+	var scores = [10, 22, 26];
+	var arrayLength = scores.length;
+	var roundNumber = 0;
+	var msg = "";
+
+
+	for (var i = 0; i < arrayLength; i++) {
+
+		roundNumber = (i + 1);
+		msg += "Round " + roundNumber + ": ";
+		msg += scores[i] + "<br />";
+
+	} /*For loop ends*/
+
+	document.getElementById('answer').innerHTML = msg;
+
+} /*shout function end*/
+
+shout();
+
+// example of a while loop  -----------------------------------------
+var i = 1;       // Set counter to 1
+var msg = '';    // Message
+
+// Store 5 times table in a variable
+// += means add this stuff to the string
+while (i < 10) {
+  msg += i + ' x 5 = ' + (i * 5) + '<br />';
+  i++;
+}
+
+document.getElementById('cost').innerHTML = msg;
+
+// example of do while loop -----------------------------------------
+var i = 1;       // Set counter to 1
+var msg = '';    // Message
+
+// Store 5 times table in a variable
+do {
+  msg += i + ' x 10 = ' + (i * 10) + '<br />';
+  i++;
+} while (i < 1); 
+// Note how this is already 1 and it still runs
+
+document.getElementById('space').innerHTML = msg;
+
+
+</script>
+</body>
+
+</html>
