@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body class="Jared">
+
+	<h1>FIRE!</h1>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe adipisci illum quo, nisi, dolorem voluptatibus. Temporibus doloremque velit nihil culpa placeat, quibusdam quae expedita ea sunt quia pariatur reiciendis veniam.</p>
+	<p class="waterEle">Water</p>
+	<p>Air</p>
+	<p>Earth</p>
+	<p>Wood</p>
+
+	<script>
+		
+		// Breakdown of the for condition
+		// for [initialExpression]; [condition]; [incrementExpression]
+		var step;
+		for (step = 0; step < 5; step++){
+			// Runs 5 times, with values of step 0 through 4.
+			console.log('Walking east one step');
+		}
+
+
+		var all = document.getElementsByTagName("*");
+
+		for (var i=0, max=all.length; i<max; i++){
+			//  Do something with the element here
+			// view the details of each element and their array number
+			console.dir(all);
+			// view a specific part of the array of elements
+			// console.dir(all[8]);
+			// hide the chosen element
+			all[8].hidden = false;
+			// hide all elements one at a time (from 0 to 13..etc) but at light speed
+			all[i].hidden = false;
+			// makes all elements a colour and "28px"
+			all[6].style.color = "red";
+			all[8].style.color = "blue";
+			all[9].style.color = "#ccc";
+			all[10].style.color = "brown";
+			all[11].style.color = "green";
+			all[i].style.fontSize = "28px";
+			all[i].style.textAlign = "center";
+			all[7].style.textAlign = "justify";
+			all[i].style.borderRadius = "25px";
+		}
+
+		var shoppingCart = [
+			{item: "soap", price: 4.99},
+			{item: "hammer", price: 19.60},
+			{item: "tissues", price: 2.95}
+		]
+
+		// this pushes the objects from shoppingCart into the prices array
+		var prices = [];
+
+		for (var i = 0, length = shoppingCart.length; i<length; i++){
+			prices.push(shoppingCart[i].price);
+		}
+
+		console.log(prices); /*[4.99, 19.60, 2.95]*/
+
+	</script>
+	
+</body>
+</html>
